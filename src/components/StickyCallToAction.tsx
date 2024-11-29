@@ -18,7 +18,7 @@ export const StickyCallToAction = ({ onCheckout, onBookDemo }: StickyCallToActio
     >
       <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
         <div className="hidden md:block">
-          <p className="font-bold text-xl">The Affiliates HQ Special Offer: Only $349</p>
+          <p className="font-bold text-xl">The Affiliates HQ Special Offer</p>
           <p className="text-gray-600">Limited time offer - Act fast!</p>
         </div>
         <div className="flex items-center space-x-4">
