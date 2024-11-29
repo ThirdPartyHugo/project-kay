@@ -30,9 +30,7 @@ function App() {
       <Hero onBookDemo={() => setIsDemoModalOpen(true)} />
       <TikTokShopExplainer />
       <KeyBenefits onBookDemo={() => setIsDemoModalOpen(true)} />
-      <Pricing 
-        onCheckout={handleCheckoutAttempt}
-      />
+      
       <Testimonials />
       <FAQ />
       <Warranty />
