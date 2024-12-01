@@ -27,6 +27,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
   return (
     <motion.div 
+      id="faq"
       className="border-b border-gray-200 py-6"
       initial={false}
       animate={{ backgroundColor: isOpen ? 'rgba(124, 58, 237, 0.05)' : 'transparent' }}
