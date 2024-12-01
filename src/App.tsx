@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { TikTokShopExplainer } from './components/TikTokShopExplainer';
 import { KeyBenefits } from './components/KeyBenefits';
-import { Pricing } from './components/Pricing/Pricing';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Warranty } from './components/Warranty';
