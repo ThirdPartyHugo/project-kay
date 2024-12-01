@@ -125,9 +125,9 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
         </p>
       </motion.div>
     </motion.div>*/
-    
-<div class="calendly-inline-widget" data-url="https://calendly.com/theaffiliateshq/30min" style="min-width:320px;height:700px;"></div>
+ <motion.div>   
+<motion.div className="calendly-inline-widget" data-url="https://calendly.com/theaffiliateshq/30min" style={{width:"320px" ,height:"700px"}}></motion.div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
+</motion.div>
   );
 }
