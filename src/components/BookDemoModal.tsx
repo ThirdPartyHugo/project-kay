@@ -52,11 +52,6 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
             <p className="text-purple-900 font-semibold">30-Minute Demo Call</p>
           </div>
           <p className="text-gray-600">Learn how our TikTok Shop solution can help you start earning immediately.</p>
-          {selectedPackage && (
-            <div className="mt-3 pt-3 border-t border-purple-100">
-              <p className="text-purple-900 font-semibold">Selected Package:</p>
-            </div>
-          )}
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
