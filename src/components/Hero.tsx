@@ -111,6 +111,7 @@ export const Hero = ({ onBookDemo }: HeroProps) => {
 
         {/* Stats Section */}
         <motion.div
+          style={{marginBottom:"100px"}}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}

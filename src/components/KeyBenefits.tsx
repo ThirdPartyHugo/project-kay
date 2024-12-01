@@ -33,7 +33,7 @@ const benefits = [
   {
     icon: Headphones,
     title: "1-on-1 Expert Support",
-    description: "Get personalized guidance through live onboarding calls to maximize your success.",
+    description: "Get personalized guidance through live onboarding calls to maximize your success.\n",
     gradient: "from-indigo-400 to-blue-500"
   }
 ];
@@ -97,6 +97,7 @@ export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
 
         <FadeInWhenVisible delay={1}>
           <motion.div
+            style={{marginBottom:"20px"}}
             onClick={onBookDemo} 
             className="mt-16 text-center"
             whileHover={{ scale: 1.02 }}
