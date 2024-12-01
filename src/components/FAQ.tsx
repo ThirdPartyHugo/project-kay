@@ -27,7 +27,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
   return (
     <motion.div 
-      id="faq"
+      
       className="border-b border-gray-200 py-6"
       initial={false}
       animate={{ backgroundColor: isOpen ? 'rgba(124, 58, 237, 0.05)' : 'transparent' }}
@@ -58,7 +58,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 
 export const FAQ = () => {
   return (
-    <section className="py-32 bg-white">
+    <section id="faq" className="py-32 bg-white">
       <div className="container mx-auto px-4">
         <FadeInWhenVisible>
           <div className="text-center mb-16">
