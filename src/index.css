@@ -8,3 +8,6 @@ body{
 #benefits svg{
     margin-bottom: -5px;
 }
+html{
+    scroll-behavior: smooth;
+}

@@ -35,6 +35,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <FadeInWhenVisible key={index} delay={index * 0.2}>
               <motion.div 
+              
                 className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow"
                 whileHover={{ y: -10 }}
               >
@@ -52,7 +53,7 @@ export const Testimonials = () => {
                     ))}
                   </motion.div>
                 </div>
-                <p className="text-gray-600 text-lg mb-6 italic">"{testimonial.text}"</p>
+                <p className="text-gray-600 text-lg mb-6 italic"   >"{testimonial.text}"</p>
                 <div className="text-center">
                   <h4 className="font-bold text-xl mb-1">{testimonial.name}</h4>
                   <p className="text-purple-600">{testimonial.location}</p>
