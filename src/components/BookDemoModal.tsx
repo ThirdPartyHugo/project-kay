@@ -55,9 +55,6 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
           {selectedPackage && (
             <div className="mt-3 pt-3 border-t border-purple-100">
               <p className="text-purple-900 font-semibold">Selected Package:</p>
-              <p className="text-purple-700">
-                {selectedPackage.type === 'premium' ? 'Premium' : 'Starter'} - ${selectedPackage.price}
-              </p>
             </div>
           )}
         </div>
