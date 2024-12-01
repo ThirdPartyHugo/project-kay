@@ -51,7 +51,7 @@ export const Testimonials = () => {
                     transition={{ delay: 0.5 + index * 0.2 }}
                   >
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current transform" />
                     ))}
                   </motion.div>
                 </div>
