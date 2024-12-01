@@ -22,7 +22,9 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150"
   }
 ];
-
+const style = {
+  transform: "unset",
+};
 export const Testimonials = () => {
   return (
     <section id="testimonials" className="py-32 bg-gray-50">
@@ -45,7 +47,7 @@ export const Testimonials = () => {
                     className="w-24 h-24 rounded-full mx-auto ring-4 ring-purple-100 object-cover"
                   />
                   <motion.div 
-                    className="absolute bottom-4 left-1/2 transform translate-x-1/2 flex" 
+                    className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex" style={style}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.5 + index * 0.2 }}
