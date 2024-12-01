@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Calendar, Clock, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface BookDemoModalProps {
   onClose: () => void;
@@ -18,18 +18,34 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
     preferredTime: ''
   });
 
+  useEffect(() => {
+    // Dynamically load Calendly script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Dynamically load Calendly styles
+    const link = document.createElement('link');
+    link.href = 'https://assets.calendly.com/assets/external/widget.css';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    // Clean up on unmount
+    return () => {
+      document.body.removeChild(script);
+      document.head.removeChild(link);
+    };
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically:
-    // 1. Save the demo booking
-    // 2. Send confirmation email
-    // 3. Schedule the call
-    // 4. If selectedPackage exists, redirect to checkout after booking
+    // Handle form submission logic
     onClose();
   };
 
   return (
-    /*<motion.div
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/50 backdrop-blur-sm"
@@ -51,83 +67,21 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
             <Calendar className="h-5 w-5 text-purple-600" />
             <p className="text-purple-900 font-semibold">30-Minute Demo Call</p>
           </div>
-          <p className="text-gray-600">Learn how our TikTok Shop solution can help you start earning immediately.</p>
+          <p className="text-gray-600">
+            Learn how our TikTok Shop solution can help you start earning immediately.
+          </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Full Name
-            </label>
-            <input
-              type="text"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Email
-            </label>
-            <input
-              type="email"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Preferred Time
-            </label>
-            <select
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-              value={formData.preferredTime}
-              onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-            >
-              <option value="">Select a time...</option>
-              <option value="morning">Morning (9AM - 12PM EST)</option>
-              <option value="afternoon">Afternoon (12PM - 5PM EST)</option>
-              <option value="evening">Evening (5PM - 8PM EST)</option>
-            </select>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-center space-x-2"
-          >
-            <Clock className="h-5 w-5" />
-            <span>Schedule Demo Call</span>
-          </button>
-        </form>
+        <div
+          className="calendly-inline-widget"
+          data-url="https://calendly.com/theaffiliateshq/30min"
+          style={{ minWidth: '320px', height: '500px' }}
+        ></div>
 
         <p className="mt-4 text-center text-sm text-gray-500">
           By booking a demo, you agree to our Terms of Service and Privacy Policy
         </p>
       </motion.div>
-    </motion.div>*/
- <motion.div>   
-<motion.div className="calendly-inline-widget" data-url="https://calendly.com/theaffiliateshq/30min" style={{width:"320px" ,height:"700px"}}></motion.div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-</motion.div>
+    </motion.div>
   );
-}
+};
