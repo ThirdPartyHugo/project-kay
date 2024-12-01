@@ -45,7 +45,7 @@ export const Testimonials = () => {
                     className="w-24 h-24 rounded-full mx-auto ring-4 ring-purple-100 object-cover"
                   />
                   <motion.div 
-                    className="absolute -bottom-4 left-1/2 transform translate-x-1/2 flex" style={{}}
+                    className="absolute bottom-4 left-1/2 transform translate-x-1/2 flex" 
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.5 + index * 0.2 }}
