@@ -29,7 +29,7 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
   };
 
   return (
-    <motion.div
+    /*<motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/50 backdrop-blur-sm"
@@ -124,6 +124,10 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
           By booking a demo, you agree to our Terms of Service and Privacy Policy
         </p>
       </motion.div>
-    </motion.div>
+    </motion.div>*/
+    
+<div class="calendly-inline-widget" data-url="https://calendly.com/theaffiliateshq/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
   );
 }
