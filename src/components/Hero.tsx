@@ -2,7 +2,11 @@ import { motion } from 'framer-motion';
 import Countdown from 'react-countdown';
 import { CheckCircle2, Sparkles, Users, Clock, Calendar } from 'lucide-react';
 
-const deadline = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+const test = new Date('2024-12-01');
+const deadline = new Date(test);
+deadline.setDate(deadline.getDate() + 8);
+
+
 
 interface HeroProps {
   onBookDemo: () => void;
