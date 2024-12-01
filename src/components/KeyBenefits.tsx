@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { Users, Clock, Shield, Headphones, Target } from 'lucide-react';
 import { FadeInWhenVisible } from './FadeInWhenVisible';
 
+interface HeroProps {
+  onBookDemo: () => void;
+}
 const benefits = [
   {
     icon: Clock,
@@ -35,7 +38,7 @@ const benefits = [
   }
 ];
 
-export const KeyBenefits = () => {
+export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
   return (
     <section id="benefits" className="relative py-32 bg-purple-900">
       <div className="container mx-auto px-6 relative">
@@ -93,7 +96,8 @@ export const KeyBenefits = () => {
         </FadeInWhenVisible>
 
         <FadeInWhenVisible delay={1}>
-          <motion.div 
+          <motion.div
+            onClick={onBookDemo} 
             className="mt-16 text-center"
             whileHover={{ scale: 1.02 }}
           >
