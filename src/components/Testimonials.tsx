@@ -45,10 +45,7 @@ export const Testimonials = () => {
                     className="w-24 h-24 rounded-full mx-auto ring-4 ring-purple-100 object-cover"
                   />
                   <motion.div 
-                    className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 flex" style={{transform:"unset"}}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.5 + index * 0.2 }}
+                    className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 flex"
                   >
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
