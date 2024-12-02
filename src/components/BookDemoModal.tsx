@@ -11,6 +11,7 @@ interface BookDemoModalProps {
 }
 
 export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) => {
+  const [widgetHeight, setWidgetHeight] = useState(500);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -31,10 +32,27 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
     link.rel = 'stylesheet';
     document.head.appendChild(link);
 
+    // Function to update widget height based on window size
+    const updateHeight = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setWidgetHeight(300); // Mobile devices
+      } else if (width <= 768) {
+        setWidgetHeight(400); // Tablets
+      } else {
+        setWidgetHeight(500); // Desktops
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener('resize', updateHeight);
+    updateHeight(); // Set initial height
+
     // Clean up on unmount
     return () => {
       document.body.removeChild(script);
       document.head.removeChild(link);
+      window.removeEventListener('resize', updateHeight);
     };
   }, []);
 
@@ -75,7 +93,7 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
         <div
           className="calendly-inline-widget"
           data-url="https://calendly.com/theaffiliateshq/30min"
-          style={{ minWidth: '320px', height: '500px' }}
+          style={{ minWidth: '320px', height: `${widgetHeight}px` }}
         ></div>
 
         <p className="mt-4 text-center text-sm text-gray-500">
