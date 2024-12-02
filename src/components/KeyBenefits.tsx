@@ -97,7 +97,7 @@ export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
 
         <FadeInWhenVisible delay={1}>
           <motion.div
-            style={{marginBottom:"40px"}}
+            style={{marginBottom:"60px"}}
             onClick={onBookDemo} 
             className="mt-16 text-center"
             whileHover={{ scale: 1.02 }}
