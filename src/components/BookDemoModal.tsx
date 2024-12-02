@@ -36,7 +36,7 @@ export const BookDemoModal = ({ onClose, selectedPackage }: BookDemoModalProps) 
     const updateHeight = () => {
       const width = window.innerWidth;
       if (width <= 480) {
-        setWidgetHeight(300); // Mobile devices
+        setWidgetHeight(350); // Mobile devices
       } else if (width <= 768) {
         setWidgetHeight(400); // Tablets
       } else {
