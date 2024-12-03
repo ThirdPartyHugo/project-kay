@@ -9,7 +9,6 @@ import { Warranty } from './components/Warranty';
 import { StickyCallToAction } from './components/StickyCallToAction';
 import { BookDemoModal } from './components/BookDemoModal';
 import { DemoRequiredModal } from './components/DemoRequiredModal';
-import ReactDOM from "react-dom";
 
 function App() {
   React.useEffect(() => {
