@@ -9,8 +9,20 @@ import { Warranty } from './components/Warranty';
 import { StickyCallToAction } from './components/StickyCallToAction';
 import { BookDemoModal } from './components/BookDemoModal';
 import { DemoRequiredModal } from './components/DemoRequiredModal';
+import ReactDOM from "react-dom";
 
 function App() {
+  React.useEffect(() => {
+    // Example: Applying cache rules dynamically for all images
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      img.setAttribute("loading", "lazy"); // Lazy-load images for better performance
+      // Add custom headers (simulated using attributes)
+      img.setAttribute("cache-control", "public, max-age=31536000, immutable");
+    });
+  }, []);
+
+
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isDemoRequiredModalOpen, setIsDemoRequiredModalOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState<{
