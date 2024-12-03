@@ -22,6 +22,7 @@ function App() {
     setSelectedPackage({ type, price });
     setIsDemoRequiredModalOpen(true);
   };
+  
 
   return (
     <div className="min-h-screen bg-white">
