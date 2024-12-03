@@ -108,7 +108,7 @@ export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
             whileHover={{ scale: 1.02 }}
           >
             <a 
-              href=""
+              href="#"
               className="inline-block px-12 py-6 text-xl font-bold text-white rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl hover:shadow-2xl transition-all"
             >
               Get Your Pre-Approved Account Now
