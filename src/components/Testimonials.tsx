@@ -6,19 +6,19 @@ const testimonials = [
   {
     name: "Sarah Johnson",
     location: "California",
-    text: "Within my first month, I was already making $2,000+ through TikTok Shop. The coaching made all the difference!",
+    text: '"Within my first month, I was already making $2,000+ through TikTok Shop. The coaching made all the difference!"',
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
   },
   {
     name: "David Miller",
     location: "Texas",
-    text: "The onboarding process was smooth and the support team is always there when I need them. Best investment I've made!",
+    text: '"The onboarding process was smooth and the support team is always there when I need them. Best investment I\'ve made!"',
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150"
   },
   {
     name: "Emily Rodriguez",
     location: "Florida",
-    text: "From complete beginner to profitable TikTok Shop seller in just weeks. Their system really works!",
+    text:( <>"From complete beginner to profitable TikTok Shop seller in just weeks. Their system really works"<br/><br/></>),
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150"
   }
 ];
@@ -53,7 +53,7 @@ export const Testimonials = () => {
                     ))}
                   </motion.div>
                 </div>
-                <p className="text-gray-600 text-lg mb-6 italic"   >"{testimonial.text}"</p>
+                <p className="text-gray-600 text-lg mb-6 italic"   >{testimonial.text}</p>
                 <div className="text-center">
                   <h4 className="font-bold text-xl mb-1">{testimonial.name}</h4>
                   <p className="text-purple-600">{testimonial.location}</p>

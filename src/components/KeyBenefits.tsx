@@ -33,7 +33,12 @@ const benefits = [
   {
     icon: Headphones,
     title: "1-on-1 Expert Support",
-    description: "Get personalized guidance through live onboarding calls to maximize your success.\n",
+    description: (
+      <>
+        Get personalized guidance through live onboarding calls to maximize your success.<br />
+        Next line of text.
+      </>
+    ),
     gradient: "from-indigo-400 to-blue-500"
   }
 ];
