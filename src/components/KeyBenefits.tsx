@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { Users, Clock, Shield, Headphones, Target } from 'lucide-react';
 import { FadeInWhenVisible } from './FadeInWhenVisible';
+import { CheckCircle, Sparkles, Zap } from 'lucide-react';
+import { AnimatedGradientBorder } from './AnimatedGradientBorder';
 
 interface HeroProps {
   onBookDemo: () => void;
+  onCheckout: (packageType: 'starter', price: number) => void;
 }
 const benefits = [
   {
@@ -42,6 +45,20 @@ const benefits = [
     gradient: "from-indigo-400 to-blue-500"
   }
 ];
+
+
+const features = [
+  'Pre-Approved US TikTok Shop Account',
+  'Same-Day Live Setup Call',
+  '5,000+ Real US Followers',
+  'Full Account Access & Ownership',
+  'Marketing Materials & Templates',
+  'Live 1-on-1 Onboarding',
+  'Expert Coaching Session',
+  'Priority Support',
+  '30-Day Money Back Guarantee'
+];
+
 
 export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
   return (
@@ -88,16 +105,43 @@ export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
         </div>
 
         <FadeInWhenVisible delay={0.8}>
-          <motion.div 
-            className="mt-20 text-center bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-2xl max-w-2xl mx-auto"
-            whileHover={{ scale: 1.02 }}
-          >
-            <h3 className="text-3xl font-bold text-white mb-6">🔥 Limited Time Bonus</h3>
-            <ul className="space-y-4 text-purple-200 text-xl">
-              <li>✓ Immediate Live Setup Call</li>
-              <li>✓ 30+ Proven Viral Niche Ideas</li>
-            </ul>
-          </motion.div>
+          
+          <div className="mt-20 text-center bg-white/10 backdrop-blur-md border border-white/20  rounded-2xl max-w-2xl mx-auto" >
+          <FadeInWhenVisible delay={0.2}>
+            <AnimatedGradientBorder className="p-8">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="relative h-full"
+              >
+               
+                <div className="flex flex-col h-full">
+                  <div className="mb-8">
+                    <h3 className="text-3xl font-bold mb-2">US TikTok Shop Affiliate Account</h3>
+                    <p className="text-gray-600 text-xl">Start earning immediately</p>
+                  </div>
+                  
+              
+                  
+                  <div className="space-y-4 mb-8 flex-grow">
+                    {features.map((feature, index) => (
+                      <motion.div 
+                        key={feature}
+                        className="flex items-center space-x-3"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+                        <span className="text-md">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+               
+                </div>
+              </motion.div>
+            </AnimatedGradientBorder>
+          </FadeInWhenVisible>
+        </div>
         </FadeInWhenVisible>
 
         <FadeInWhenVisible delay={1}>
@@ -114,8 +158,28 @@ export const KeyBenefits = ({ onBookDemo }: HeroProps) => {
               Get Your Pre-Approved Account Now
             </a>
           </motion.div>
+          
+      
+
+        
+      
+    
         </FadeInWhenVisible>
       </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Add a decorative bottom wave for smooth transition */}
       <div className="absolute bottom-0 left-0 right-0">

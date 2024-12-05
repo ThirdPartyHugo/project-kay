@@ -27,8 +27,8 @@ export const Warranty = () => {
                   Issues? Get Free Account!
                 </h2>
                 <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                  In case of any issues with your account, we will replace it for free, no questions asked.
-                  All our customers are fully covered by our warranty, no matter the situation.
+                  In case of any issues with your account, we will replace it for free.
+                  All our customers are fully covered by our warranty.
                 </p>
               </motion.div>
             </div>
@@ -44,8 +44,8 @@ export const Warranty = () => {
                   Warranty Coverage
                 </h3>
                 <p className="text-lg text-gray-600">
-                  This warranty policy applies to TikTok accounts provided by The Affiliates HQ. If your account faces disqualification 
-                  or is removed from the Creator Rewards Program, you may be eligible for a replacement account.
+                This warranty policy applies to TikTok accounts provided by The Affiliates HQ. We grow our accounts organically which is why our accounts do not get flagged and banned,
+                if your account ever faces disqualification or is removed from the creator Rewards program, you will be eligble for a replacement account completely free
                 </p>
               </motion.div>
 

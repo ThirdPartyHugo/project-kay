@@ -5,6 +5,7 @@ import { TikTokShopExplainer } from './components/TikTokShopExplainer';
 import { KeyBenefits } from './components/KeyBenefits';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
+
 import { Warranty } from './components/Warranty';
 import { StickyCallToAction } from './components/StickyCallToAction';
 import { BookDemoModal } from './components/BookDemoModal';
@@ -40,7 +41,9 @@ function App() {
       <Header />
       <Hero onBookDemo={() => setIsDemoModalOpen(true)} />
       <TikTokShopExplainer />
-      <KeyBenefits onBookDemo={() => setIsDemoModalOpen(true)} />
+      <KeyBenefits onBookDemo={() => setIsDemoModalOpen(true)} 
+        onCheckout={handleCheckoutAttempt}
+        />
       
       <Testimonials />
       <FAQ />

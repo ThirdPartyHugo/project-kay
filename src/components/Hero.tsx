@@ -123,7 +123,7 @@ export const Hero = ({ onBookDemo }: HeroProps) => {
         >
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
             <Users className="h-10 w-10 text-purple-600 mb-6" />
-            <h3 className="text-3xl font-bold mb-2">12,000+</h3>
+            <h3 className="text-3xl font-bold mb-2">1,000+</h3>
             <p className="text-gray-600 text-lg">Satisfied Clients</p>
           </div>
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl">
