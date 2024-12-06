@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: "Do I need any previous experience with TikTok or affiliate marketing?",
-    answer: "No experience needed! Our comprehensive training and live coaching sessions will teach you everything from basic TikTok navigation to advanced affiliate marketing strategies."
+    answer: "Simply use tiktok live like you already do, create content, tag products and earn commissions whenever your videos generate sales."
   },
   {
     question: "What makes your TikTok Shop accounts different from others?",
@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "How much can I realistically earn per month?",
-    answer: "Earnings vary based on effort and strategy. Our top performers consistently earn $5,000+ monthly, with some reaching $10,000+. We provide all the training and support needed to help you maximize your earnings potential."
+    answer: "Earnings vary based on effort and strategy. Our top performers consistently earn $5,000+ monthly, with some reaching $10,000+."
   }
 ];
 
