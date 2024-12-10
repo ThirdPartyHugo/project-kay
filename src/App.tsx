@@ -17,15 +17,7 @@ function App() {
 
   useEffect(() => {
     // Call the serverless function on mount
-    fetch("/.netlify/functions/hello")
-      .then((response) => response.json())
-      .then((data) => {
-        setApiMessage(data.message); // Update state with the API response
-      })
-      .catch((error) => {
-        console.error("Error fetching the hello API:", error);
-      });
-
+    
     const images = document.querySelectorAll("img");
     images.forEach((img) => {
       img.setAttribute("loading", "lazy");
